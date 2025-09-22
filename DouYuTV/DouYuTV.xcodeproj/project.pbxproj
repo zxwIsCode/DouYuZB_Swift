@@ -99,10 +99,10 @@
 		EB0EB6CB2E8041A400B50451 /* DouYuTV */ = {
 			isa = PBXGroup;
 			children = (
+				EB4B16722E8153C60080A7F4 /* Classes */,
 				EB0EB6CC2E8041A400B50451 /* AppDelegate.swift */,
 				EB0EB6CE2E8041A400B50451 /* SceneDelegate.swift */,
 				EB0EB6D02E8041A400B50451 /* ViewController.swift */,
-				EB0EB6D22E8041A400B50451 /* Main.storyboard */,
 				EB0EB6D52E8041A700B50451 /* Assets.xcassets */,
 				EB0EB6D72E8041A700B50451 /* LaunchScreen.storyboard */,
 				EB0EB6DA2E8041A700B50451 /* Info.plist */,
@@ -125,6 +125,62 @@
 				EB0EB6EF2E8041A700B50451 /* DouYuTVUITestsLaunchTests.swift */,
 			);
 			path = DouYuTVUITests;
+			sourceTree = "<group>";
+		};
+		EB4B16722E8153C60080A7F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B16732E8153C60080A7F4 /* Home */,
+				EB4B16742E8153C60080A7F4 /* Tools */,
+				EB4B16752E8153C60080A7F4 /* Follow */,
+				EB4B16762E8153C60080A7F4 /* Profile */,
+				EB4B16772E8153C60080A7F4 /* Live */,
+				EB4B16782E8153C60080A7F4 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EB4B16732E8153C60080A7F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB4B16742E8153C60080A7F4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		EB4B16752E8153C60080A7F4 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		EB4B16762E8153C60080A7F4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EB4B16772E8153C60080A7F4 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		EB4B16782E8153C60080A7F4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EB0EB6D22E8041A400B50451 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
