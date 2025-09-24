@@ -15,6 +15,7 @@ class MainViewController: UITabBarController {
 //        let vc = UIViewController()
 //        vc.view.backgroundColor = UIColor.red
 //        addChild(vc)
+        // 添加各个子控制器实现
         addChildVC(storyName: "Home")
         addChildVC(storyName: "Live")
         addChildVC(storyName: "Follow")
