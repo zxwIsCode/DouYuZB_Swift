@@ -11,16 +11,17 @@ private let kTitleViewH:CGFloat = 40
 
 class HomeViewController: UIViewController {
     
-    private lazy var pageTitleView:PageTitleView = {
+    private lazy var pageTitleView:PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenWidth, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩",]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
 //        titleView.backgroundColor = UIColor.blue
+        titleView.delegate = self
         return titleView
         
     }()
     
-    private lazy var pageContentView:PageContentView = {
+    private lazy var pageContentView:PageContentView = {[weak self] in
         let contentY = kStatusBarH + kNavigationBarH + kTitleViewH
         let contentH = kScreenHeight - contentY
         
@@ -100,5 +101,13 @@ extension HomeViewController {
                 let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
                 let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
+    }
+}
+
+// 遵守PageTitleViewDelegate的协议
+extension HomeViewController:PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedIndex: Int) {
+        print("index=",selectedIndex)
+        pageContentView.setCurrentIndex(currentIndex: selectedIndex)
     }
 }

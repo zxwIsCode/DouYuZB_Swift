@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate:class {
+    func pageTitleView(titleView:PageTitleView,selectedIndex:Int)
+}
+
 private let kScrollLineH:CGFloat = 2
+
+
 
 class PageTitleView: UIView {
     
+    private var currentIndex:Int = 0
     private var titles:[String]
+    weak var delegate:PageTitleViewDelegate?
     private lazy var titleLabels:[UILabel] = [UILabel]()
     private lazy var scrollView:UIScrollView = {
         let scrollView = UIScrollView()
@@ -74,8 +82,17 @@ extension PageTitleView {
             
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            // 给label添加手势
+            label.isUserInteractionEnabled = true
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(titleLabelClick))
+            label.addGestureRecognizer(tapGesture)
+            
         }
     }
+    
+   
     
     private func setupBottomMenuAndScrollLine() {
         let bottomLine = UIView()
@@ -89,5 +106,31 @@ extension PageTitleView {
         firstLabel.textColor = UIColor.orange
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
         scrollView.addSubview(scrollLine)
+    }
+}
+
+// 给label添加手势
+extension PageTitleView {
+    
+    @objc private func titleLabelClick(taps:UITapGestureRecognizer) {
+//        print("----")
+        // 获取当前label的下标值
+        guard let currentLabel = taps.view as? UILabel else {return}
+        
+        let oldLabel = titleLabels[currentIndex]
+        
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        currentIndex = currentLabel.tag
+        
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.width
+        UIView .animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        //  通知代理做事情
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+        
     }
 }
