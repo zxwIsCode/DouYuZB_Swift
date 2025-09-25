@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
         }
         let pageContentView = PageContentView(frame: CGRect(x: 0, y: contentY, width: kScreenWidth, height: contentH), childVcs: childVcs, parentVc: self)
 //        pageContentView.backgroundColor = UIColor.red
+        pageContentView.delegate = self
         return pageContentView
     }()
 
@@ -107,7 +108,14 @@ extension HomeViewController {
 // 遵守PageTitleViewDelegate的协议
 extension HomeViewController:PageTitleViewDelegate {
     func pageTitleView(titleView: PageTitleView, selectedIndex: Int) {
-        print("index=",selectedIndex)
+//        print("index=",selectedIndex)
         pageContentView.setCurrentIndex(currentIndex: selectedIndex)
+    }
+}
+
+// 遵守PageContentViewDelegate的协议
+extension HomeViewController:PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

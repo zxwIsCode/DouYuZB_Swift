@@ -134,3 +134,16 @@ extension PageTitleView {
         
     }
 }
+
+// PageTitleView对外暴露方法
+extension PageTitleView {
+    func setTitleWithProgress(progress:CGFloat, sourceIndex:Int, targetIndex:Int){
+        // 取出sourceLabel
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+       let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+    }
+}

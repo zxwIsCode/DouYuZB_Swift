@@ -9,12 +9,18 @@ import UIKit
 
 private let ContentCellID = "ContentCellID"
 
+protocol PageContentViewDelegate:class {
+    func pageContentView(contentView:PageContentView,progress:CGFloat, sourceIndex:Int, targetIndex:Int)
+}
+
 class PageContentView: UIView {
     
     // 自定义属性
     private var childVcs:[UIViewController]
     //  加弱引用weak，防止循环引用，而对象类型只能是可选类型
     private weak var parentVc:UIViewController?
+    private var startOffSetX:CGFloat = 0
+    weak var delegate:PageContentViewDelegate?
     
     // 闭包里面用到self也要进行weak弱引用
     private lazy var collectionView:UICollectionView = {[weak self] in
@@ -26,9 +32,10 @@ class PageContentView: UIView {
         
         let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.isPagingEnabled = false
+        collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         return collectionView
         
@@ -78,6 +85,46 @@ extension PageContentView: UICollectionViewDataSource {
         childVc.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVc.view)
         return cell
+    }
+}
+
+// 遵守UICollectionViewDelegate协议
+extension PageContentView:UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffSetX = scrollView.contentOffset.x
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("----")
+        var progress:CGFloat = 0
+        var sourceIndex:Int = 0
+        var targetIndex:Int = 0
+        
+        let currentOffSetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.frame.width
+        if(currentOffSetX > startOffSetX) { // 左滑
+            progress = currentOffSetX/scrollViewW - floor(currentOffSetX/scrollViewW)
+            sourceIndex = Int(currentOffSetX/scrollViewW)
+            targetIndex = sourceIndex + 1
+            if(targetIndex >= childVcs.count) {
+                targetIndex = childVcs.count - 1
+            }
+            // 如果完全滑过去
+            if(currentOffSetX - startOffSetX == scrollViewW) {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        }
+        else {// 右滑
+            progress = 1 - (currentOffSetX/scrollViewW - floor(currentOffSetX/scrollViewW))
+            targetIndex = Int(currentOffSetX/scrollViewW)
+            sourceIndex = targetIndex + 1
+            if(sourceIndex >= childVcs.count) {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+        
+//        print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(targetIndex)")
+        delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
 
