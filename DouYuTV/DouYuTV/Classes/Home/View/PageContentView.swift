@@ -20,6 +20,7 @@ class PageContentView: UIView {
     //  加弱引用weak，防止循环引用，而对象类型只能是可选类型
     private weak var parentVc:UIViewController?
     private var startOffSetX:CGFloat = 0
+    private var isForbidScrollDelegate:Bool = false
     weak var delegate:PageContentViewDelegate?
     
     // 闭包里面用到self也要进行weak弱引用
@@ -91,9 +92,11 @@ extension PageContentView: UICollectionViewDataSource {
 // 遵守UICollectionViewDelegate协议
 extension PageContentView:UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
         startOffSetX = scrollView.contentOffset.x
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isForbidScrollDelegate { return }
 //        print("----")
         var progress:CGFloat = 0
         var sourceIndex:Int = 0
@@ -131,6 +134,8 @@ extension PageContentView:UICollectionViewDelegate {
 // 对外暴露的方法
 extension PageContentView {
     func setCurrentIndex(currentIndex:Int) {
+        // 禁止执行代理方法
+        isForbidScrollDelegate = true
         let offSetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x: offSetX, y: 0), animated: false)
     }

@@ -12,6 +12,8 @@ protocol PageTitleViewDelegate:class {
 }
 
 private let kScrollLineH:CGFloat = 2
+private let kNormalColor:(CGFloat,CGFloat,CGFloat) = (85,85,85)
+private let kSelectedColor:(CGFloat,CGFloat,CGFloat) = (255,128,0)
 
 
 
@@ -72,7 +74,7 @@ extension PageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16)
-            label.textColor = UIColor.darkGray
+            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
             label.textAlignment = .center
             
             
@@ -103,7 +105,7 @@ extension PageTitleView {
         
         //guard语法需要研究学习一下
         guard let firstLabel = titleLabels.first else{ return }
-        firstLabel.textColor = UIColor.orange
+        firstLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
         scrollView.addSubview(scrollLine)
     }
@@ -119,8 +121,8 @@ extension PageTitleView {
         
         let oldLabel = titleLabels[currentIndex]
         
-        currentLabel.textColor = UIColor.orange
-        oldLabel.textColor = UIColor.darkGray
+        currentLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)
+        oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
         
         currentIndex = currentLabel.tag
         
@@ -145,5 +147,13 @@ extension PageTitleView {
        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
         let moveX = moveTotalX * progress
         scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        // 颜色的渐变功能实现
+        let  colorDelta = (kSelectedColor.0 - kNormalColor.0,kSelectedColor.1 - kNormalColor.1, kSelectedColor.2 - kNormalColor.2)
+        sourceLabel.textColor = UIColor(r: kSelectedColor.0 - colorDelta.0 * progress, g: kSelectedColor.1 - colorDelta.1 * progress, b: kSelectedColor.2 - colorDelta.2 * progress)
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        // 记录最新的下标
+        currentIndex = targetIndex
     }
 }
