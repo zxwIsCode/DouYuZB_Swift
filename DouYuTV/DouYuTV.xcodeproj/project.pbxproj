@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ACA8A4D4E49671411737E43 /* Pods_DouYuTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B5C87850B38B227820F78B /* Pods_DouYuTV.framework */; };
 		EB0EB6CD2E8041A400B50451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0EB6CC2E8041A400B50451 /* AppDelegate.swift */; };
 		EB0EB6CF2E8041A400B50451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0EB6CE2E8041A400B50451 /* SceneDelegate.swift */; };
 		EB0EB6D12E8041A400B50451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0EB6D02E8041A400B50451 /* ViewController.swift */; };
@@ -54,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D35AB936846E4C842ECD0BE /* Pods-DouYuTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuTV.release.xcconfig"; path = "Target Support Files/Pods-DouYuTV/Pods-DouYuTV.release.xcconfig"; sourceTree = "<group>"; };
+		E29481726B97E5A1A12CE67F /* Pods-DouYuTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuTV.debug.xcconfig"; path = "Target Support Files/Pods-DouYuTV/Pods-DouYuTV.debug.xcconfig"; sourceTree = "<group>"; };
+		E3B5C87850B38B227820F78B /* Pods_DouYuTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0EB6C92E8041A400B50451 /* DouYuTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0EB6CC2E8041A400B50451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB0EB6CE2E8041A400B50451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACA8A4D4E49671411737E43 /* Pods_DouYuTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07210A18DF4FC1D2E90331AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3B5C87850B38B227820F78B /* Pods_DouYuTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913E4B3A4D56109E88A181B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E29481726B97E5A1A12CE67F /* Pods-DouYuTV.debug.xcconfig */,
+				6D35AB936846E4C842ECD0BE /* Pods-DouYuTV.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB0EB6C02E8041A400B50451 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +142,8 @@
 				EB0EB6E22E8041A700B50451 /* DouYuTVTests */,
 				EB0EB6EC2E8041A700B50451 /* DouYuTVUITests */,
 				EB0EB6CA2E8041A400B50451 /* Products */,
+				913E4B3A4D56109E88A181B5 /* Pods */,
+				07210A18DF4FC1D2E90331AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,9 +397,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB0EB6F32E8041A700B50451 /* Build configuration list for PBXNativeTarget "DouYuTV" */;
 			buildPhases = (
+				C865E0D99ECDC7C9CCDD56B7 /* [CP] Check Pods Manifest.lock */,
 				EB0EB6C52E8041A400B50451 /* Sources */,
 				EB0EB6C62E8041A400B50451 /* Frameworks */,
 				EB0EB6C72E8041A400B50451 /* Resources */,
+				9BAD894A3D8EA9EA39FA7964 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,6 +524,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BAD894A3D8EA9EA39FA7964 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYuTV/Pods-DouYuTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouYuTV/Pods-DouYuTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouYuTV/Pods-DouYuTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C865E0D99ECDC7C9CCDD56B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DouYuTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB0EB6C52E8041A400B50451 /* Sources */ = {
@@ -680,6 +749,7 @@
 		};
 		EB0EB6F42E8041A700B50451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E29481726B97E5A1A12CE67F /* Pods-DouYuTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -711,6 +781,7 @@
 		};
 		EB0EB6F52E8041A700B50451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D35AB936846E4C842ECD0BE /* Pods-DouYuTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
