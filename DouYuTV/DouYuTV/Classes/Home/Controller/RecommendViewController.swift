@@ -27,7 +27,10 @@ class RecommendViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        // 自定义实现Cell
+        var cellNib = UINib(nibName: "CollectionNormalCell", bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: kNormalCellID)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         // 自定义实现HeaderView
         var nib = UINib(nibName: "CollectionHeaderView", bundle: nil)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
@@ -73,7 +76,7 @@ extension RecommendViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        cell.backgroundColor = UIColor.red
+//        cell.backgroundColor = UIColor.red
         return cell
     }
     

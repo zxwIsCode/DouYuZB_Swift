@@ -17,6 +17,8 @@
 		EB0EB6F02E8041A700B50451 /* DouYuTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0EB6EF2E8041A700B50451 /* DouYuTVUITestsLaunchTests.swift */; };
 		EB1BD5102E8D1ED6006F589A /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD50E2E8D1ED6006F589A /* CollectionHeaderView.swift */; };
 		EB1BD5112E8D1ED6006F589A /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */; };
+		EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */; };
+		EB1BD5152E8D2944006F589A /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */; };
 		EB4A347E2E83E57700AAC230 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A347B2E83E57700AAC230 /* Live.storyboard */; };
 		EB4A34832E83E58B00AAC230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A34812E83E58B00AAC230 /* Profile.storyboard */; };
 		EB4A34892E83E5AD00AAC230 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A34862E83E5AD00AAC230 /* MainViewController.swift */; };
@@ -64,6 +66,8 @@
 		EB0EB6EF2E8041A700B50451 /* DouYuTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYuTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EB1BD50E2E8D1ED6006F589A /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		EB4A347B2E83E57700AAC230 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		EB4A34812E83E58B00AAC230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		EB4A34862E83E5AD00AAC230 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		EB4A34842E83E5AD00AAC230 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */,
+				EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 			files = (
 				EB0EB6D92E8041A700B50451 /* LaunchScreen.storyboard in Resources */,
 				EB1BD5112E8D1ED6006F589A /* CollectionHeaderView.xib in Resources */,
+				EB1BD5152E8D2944006F589A /* CollectionNormalCell.xib in Resources */,
 				EB0EB6D62E8041A700B50451 /* Assets.xcassets in Resources */,
 				EB4A348A2E83E5AD00AAC230 /* Main.storyboard in Resources */,
 				EB4A348F2E83E61100AAC230 /* Follow.storyboard in Resources */,
@@ -497,6 +504,7 @@
 				EB0EB6D12E8041A400B50451 /* ViewController.swift in Sources */,
 				EB4A34992E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift in Sources */,
 				EB0EB6CD2E8041A400B50451 /* AppDelegate.swift in Sources */,
+				EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */,
 				EB0EB6CF2E8041A400B50451 /* SceneDelegate.swift in Sources */,
 				EB1BD5102E8D1ED6006F589A /* CollectionHeaderView.swift in Sources */,
 				EB4A34892E83E5AD00AAC230 /* MainViewController.swift in Sources */,
