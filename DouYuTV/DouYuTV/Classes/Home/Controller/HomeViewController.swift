@@ -62,13 +62,13 @@ class HomeViewController: UIViewController {
 //            }
 //        }
         
-        NetWorkTools.requestData(type: MethodType.GET, URLString: "http://httpbin.org/get") { result in
-            print("result=\(result)")
-        }
-        
-        NetWorkTools.requestData(type: MethodType.POST, URLString: "http://httpbin.org/post",parameters: ["name":"hello"]) { result in
-            print("result=\(result)")
-        }
+//        NetWorkTools.requestData(type: MethodType.GET, URLString: "http://httpbin.org/get") { result in
+//            print("result=\(result)")
+//        }
+//        
+//        NetWorkTools.requestData(type: MethodType.POST, URLString: "http://httpbin.org/post",parameters: ["name":"hello"]) { result in
+//            print("result=\(result)")
+//        }
     }
     
 

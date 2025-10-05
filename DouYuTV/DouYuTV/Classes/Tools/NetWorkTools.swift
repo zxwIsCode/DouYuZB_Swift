@@ -15,7 +15,7 @@ case GET
 
 class NetWorkTools {
     
-    class func requestData(type:MethodType,URLString:String,parameters:[String:NSString]? = nil, finishedCallback:(_ result:AnyObject) -> ()) {
+    class func requestData(type:MethodType,URLString:String,parameters:[String:NSString]? = nil, finishedCallback:@escaping (AnyObject) -> ()) {
         let method = type == MethodType.GET ? HTTPMethod.get : HTTPMethod.post
         
         Alamofire.request(URLString,method: method,parameters: parameters).responseJSON { response in
@@ -23,7 +23,8 @@ class NetWorkTools {
                 print(response.result.error)
                 return
             }
-            print(result)
+            finishedCallback(result as AnyObject)
+//            print(result)
         }
         
     }

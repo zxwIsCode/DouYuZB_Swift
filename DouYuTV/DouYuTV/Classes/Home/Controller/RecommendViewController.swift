@@ -50,6 +50,7 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        loadData()
     }
     
 
@@ -64,6 +65,14 @@ extension RecommendViewController {
         view.addSubview(collectionView)
     }
 
+}
+
+extension RecommendViewController {
+    private func loadData() {
+        NetWorkTools.requestData(type: .GET, URLString: "http:httpbin.org/get", parameters: ["name":"data"]) { result in
+            print("result=\(result)")
+        }
+    }
 }
 
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
