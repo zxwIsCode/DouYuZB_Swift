@@ -46,20 +46,28 @@ class HomeViewController: UIViewController {
         
         // 网络请求
         // Alamofire的基础使用
-        Alamofire.request("http://httpbin.org/get")
-          .responseJSON { response in
-            // 处理响应数据
-            if let getJson = response.result.value {
-              print("get=\(getJson)")
-            }
+//        Alamofire.request("http://httpbin.org/get")
+//          .responseJSON { response in
+//            // 处理响应数据
+//            if let getJson = response.result.value {
+//              print("get=\(getJson)")
+//            }
+//        }
+//
+//        Alamofire.request("http://httpbin.org/post",method: HTTPMethod.post,parameters: ["name":"hello"])
+//          .responseJSON { response in
+//            // 处理响应数据
+//            if let postjson = response.result.value {
+//                print("post=\(postjson)")
+//            }
+//        }
+        
+        NetWorkTools.requestData(type: MethodType.GET, URLString: "http://httpbin.org/get") { result in
+            print("result=\(result)")
         }
         
-        Alamofire.request("http://httpbin.org/post",method: HTTPMethod.post,parameters: ["name":"hello"])
-          .responseJSON { response in
-            // 处理响应数据
-            if let postjson = response.result.value {
-                print("post=\(postjson)")
-            }
+        NetWorkTools.requestData(type: MethodType.POST, URLString: "http://httpbin.org/post",parameters: ["name":"hello"]) { result in
+            print("result=\(result)")
         }
     }
     

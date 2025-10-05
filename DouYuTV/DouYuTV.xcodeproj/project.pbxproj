@@ -20,6 +20,7 @@
 		EB1BD5112E8D1ED6006F589A /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */; };
 		EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */; };
 		EB1BD5152E8D2944006F589A /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */; };
+		EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3884E82E92753A00175420 /* NetWorkTools.swift */; };
 		EB4A347E2E83E57700AAC230 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A347B2E83E57700AAC230 /* Live.storyboard */; };
 		EB4A34832E83E58B00AAC230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A34812E83E58B00AAC230 /* Profile.storyboard */; };
 		EB4A34892E83E5AD00AAC230 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A34862E83E5AD00AAC230 /* MainViewController.swift */; };
@@ -74,6 +75,7 @@
 		EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		EB3884E82E92753A00175420 /* NetWorkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		EB4A347B2E83E57700AAC230 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		EB4A34812E83E58B00AAC230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		EB4A34862E83E5AD00AAC230 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 				E29481726B97E5A1A12CE67F /* Pods-DouYuTV.debug.xcconfig */,
 				6D35AB936846E4C842ECD0BE /* Pods-DouYuTV.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -346,6 +347,7 @@
 			children = (
 				EB4A34972E83EC8D00AAC230 /* Extension */,
 				EBE77F282E83F8300000F610 /* Common.swift */,
+				EB3884E82E92753A00175420 /* NetWorkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -577,6 +579,7 @@
 				EBA44A872E853CB000D70C4F /* PageContentView.swift in Sources */,
 				EB4A34962E83E68E00AAC230 /* HomeViewController.swift in Sources */,
 				EBE77F272E83F6880000F610 /* PageTitleView.swift in Sources */,
+				EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */,
 				EB0EB6D12E8041A400B50451 /* ViewController.swift in Sources */,
 				EB4A34992E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift in Sources */,
 				EB0EB6CD2E8041A400B50451 /* AppDelegate.swift in Sources */,
