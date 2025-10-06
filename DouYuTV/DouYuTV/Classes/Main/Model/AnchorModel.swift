@@ -18,7 +18,8 @@ class AnchorModel: NSObject {
     @objc dynamic var nickname : String = ""
     // 在线人数
     @objc dynamic var online : Int = 0
-    
+    // 所在城市
+    @objc dynamic var anchor_city : String = ""
     
     
     init(dict : [String : NSObject]) {

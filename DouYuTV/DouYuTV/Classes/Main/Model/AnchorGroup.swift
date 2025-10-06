@@ -22,10 +22,14 @@ class AnchorGroup: NSObject {
         }
     }
     @objc dynamic var tag_name: String = ""
-    @objc dynamic var icon_url: String = "home_header_normal"
+    @objc dynamic var icon_name: String = "home_header_normal"
     
     // 定义主播的模型对象数组
     lazy var anchors : [AnchorModel] = [AnchorModel]()
+    
+    override init() {
+        
+    }
     
     init(dict: [String:NSObject]) {
         super.init()
