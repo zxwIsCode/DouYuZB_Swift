@@ -31,8 +31,12 @@
 		EB4A34992E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A34982E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift */; };
 		EB616ACA2E8D2FA7008FE8A8 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB616AC82E8D2FA7008FE8A8 /* CollectionPrettyCell.swift */; };
 		EB616ACB2E8D2FA7008FE8A8 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB616AC92E8D2FA7008FE8A8 /* CollectionPrettyCell.xib */; };
+		EB9CCA612E93B81A0098CC27 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CCA602E93B81A0098CC27 /* RecommendViewModel.swift */; };
 		EBA44A872E853CB000D70C4F /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA44A862E853CB000D70C4F /* PageContentView.swift */; };
 		EBA44A892E853E8C00D70C4F /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA44A882E853E8C00D70C4F /* UIColor-Extension.swift */; };
+		EBD167882E93BD2800062A2C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD167872E93BD2800062A2C /* NSDate-Extension.swift */; };
+		EBD1678A2E93C14400062A2C /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD167892E93C14400062A2C /* AnchorGroup.swift */; };
+		EBD1678C2E93C68A00062A2C /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1678B2E93C68A00062A2C /* AnchorModel.swift */; };
 		EBD6B2EE2E8694E00020D0C9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6B2ED2E8694E00020D0C9 /* RecommendViewController.swift */; };
 		EBE77F272E83F6880000F610 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE77F262E83F6880000F610 /* PageTitleView.swift */; };
 		EBE77F292E83F8300000F610 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE77F282E83F8300000F610 /* Common.swift */; };
@@ -86,8 +90,12 @@
 		EB4A34982E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		EB616AC82E8D2FA7008FE8A8 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		EB616AC92E8D2FA7008FE8A8 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		EB9CCA602E93B81A0098CC27 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		EBA44A862E853CB000D70C4F /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		EBA44A882E853E8C00D70C4F /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		EBD167872E93BD2800062A2C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		EBD167892E93C14400062A2C /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		EBD1678B2E93C68A00062A2C /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		EBD6B2ED2E8694E00020D0C9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		EBE77F262E83F6880000F610 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		EBE77F282E83F8300000F610 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -256,6 +264,8 @@
 		EB4A34882E83E5AD00AAC230 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBD167892E93C14400062A2C /* AnchorGroup.swift */,
+				EBD1678B2E93C68A00062A2C /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +325,7 @@
 			children = (
 				EB4A34982E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift */,
 				EBA44A882E853E8C00D70C4F /* UIColor-Extension.swift */,
+				EBD167872E93BD2800062A2C /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 		EB4B16732E8153C60080A7F4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB9CCA5F2E93B7FB0098CC27 /* ViewModel */,
 				EB4A34902E83E62500AAC230 /* Controller */,
 				EB4A34922E83E62500AAC230 /* Model */,
 				EB4A34932E83E62500AAC230 /* View */,
@@ -390,6 +402,14 @@
 				EB4A34842E83E5AD00AAC230 /* View */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EB9CCA5F2E93B7FB0098CC27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB9CCA602E93B81A0098CC27 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,11 +596,15 @@
 			files = (
 				EBE77F292E83F8300000F610 /* Common.swift in Sources */,
 				EBA44A892E853E8C00D70C4F /* UIColor-Extension.swift in Sources */,
+				EBD1678C2E93C68A00062A2C /* AnchorModel.swift in Sources */,
 				EBA44A872E853CB000D70C4F /* PageContentView.swift in Sources */,
 				EB4A34962E83E68E00AAC230 /* HomeViewController.swift in Sources */,
 				EBE77F272E83F6880000F610 /* PageTitleView.swift in Sources */,
+				EB9CCA612E93B81A0098CC27 /* RecommendViewModel.swift in Sources */,
+				EBD1678A2E93C14400062A2C /* AnchorGroup.swift in Sources */,
 				EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */,
 				EB0EB6D12E8041A400B50451 /* ViewController.swift in Sources */,
+				EBD167882E93BD2800062A2C /* NSDate-Extension.swift in Sources */,
 				EB4A34992E83ECAA00AAC230 /* UIBarButtonItem-Extension.swift in Sources */,
 				EB0EB6CD2E8041A400B50451 /* AppDelegate.swift in Sources */,
 				EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */,

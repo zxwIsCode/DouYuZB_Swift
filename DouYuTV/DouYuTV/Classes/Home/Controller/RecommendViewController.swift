@@ -19,6 +19,8 @@ private let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {
     
+    private lazy var recommendVM:RecommendViewModel = RecommendViewModel()
+    
     private lazy var collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -50,6 +52,7 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        // 发送网络请求
         loadData()
     }
     
@@ -69,9 +72,8 @@ extension RecommendViewController {
 
 extension RecommendViewController {
     private func loadData() {
-        NetWorkTools.requestData(type: .GET, URLString: "http:httpbin.org/get", parameters: ["name":"data"]) { result in
-            print("result=\(result)")
-        }
+        recommendVM.requestData()
+        
     }
 }
 
