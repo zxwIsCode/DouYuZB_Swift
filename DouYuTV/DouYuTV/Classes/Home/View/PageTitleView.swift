@@ -118,7 +118,7 @@ extension PageTitleView {
 //        print("----")
         // 获取当前label的下标值
         guard let currentLabel = taps.view as? UILabel else {return}
-        
+        // 如果点击是当前的label，则不需要执行后续流程
         if currentLabel.tag == currentIndex { return }
         
         let oldLabel = titleLabels[currentIndex]
