@@ -9,9 +9,14 @@ import UIKit
 
 class CollectionHeaderView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    var anchorGroup : AnchorGroup! {
+        didSet {
+            titleLabel.text = anchorGroup.tag_name
+            iconImageView.image = UIImage(named: anchorGroup.icon_name)
+        }
     }
     
 }
