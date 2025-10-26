@@ -31,7 +31,7 @@
                         <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-x7-AoX">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-x7-AoX">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="103"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -71,6 +71,12 @@
                 <constraint firstAttribute="trailing" secondItem="t1Z-G2-2Q9" secondAttribute="trailing" constant="5" id="sEX-mN-kas"/>
             </constraints>
             <size key="customSize" width="225" height="132"/>
+            <connections>
+                <outlet property="iconImageView" destination="Zjm-x7-AoX" id="eHx-t3-xf7"/>
+                <outlet property="nickNameLabel" destination="dza-Ii-OYi" id="WfY-tP-bJb"/>
+                <outlet property="onlineBtn" destination="YXl-nm-bnC" id="5F1-Ge-IAw"/>
+                <outlet property="roomNameLabel" destination="t1Z-G2-2Q9" id="AJo-dX-Bel"/>
+            </connections>
             <point key="canvasLocation" x="264.49275362318843" y="136.60714285714286"/>
         </collectionViewCell>
     </objects>

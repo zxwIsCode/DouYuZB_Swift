@@ -119,6 +119,8 @@ extension PageTitleView {
         // 获取当前label的下标值
         guard let currentLabel = taps.view as? UILabel else {return}
         
+        if currentLabel.tag == currentIndex { return }
+        
         let oldLabel = titleLabels[currentIndex]
         
         currentLabel.textColor = UIColor(r: kSelectedColor.0, g: kSelectedColor.1, b: kSelectedColor.2)

@@ -38,7 +38,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="MAh-ip-o4q">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="MAh-ip-o4q">
                         <rect key="frame" x="0.0" y="0.0" width="191" height="147"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -75,6 +75,12 @@
                 <constraint firstAttribute="bottom" secondItem="n5f-AX-vyQ" secondAttribute="bottom" constant="10" id="pSa-Zt-Gow"/>
             </constraints>
             <size key="customSize" width="191" height="197"/>
+            <connections>
+                <outlet property="cityBtn" destination="n5f-AX-vyQ" id="tO3-fL-iCI"/>
+                <outlet property="iconImageView" destination="MAh-ip-o4q" id="VhV-US-2vc"/>
+                <outlet property="nickNameLabel" destination="6QS-xc-XtO" id="RJy-bn-G2Z"/>
+                <outlet property="onlineLabel" destination="Fvy-eG-wq3" id="4ax-h5-ElX"/>
+            </connections>
             <point key="canvasLocation" x="239.85507246376812" y="159.04017857142856"/>
         </collectionViewCell>
     </objects>
