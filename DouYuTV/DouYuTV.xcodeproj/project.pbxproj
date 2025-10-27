@@ -20,6 +20,7 @@
 		EB1BD5112E8D1ED6006F589A /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */; };
 		EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */; };
 		EB1BD5152E8D2944006F589A /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */; };
+		EB29DB3A2EAF5DDD00EDAC75 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29DB392EAF5DDD00EDAC75 /* CycleModel.swift */; };
 		EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3884E82E92753A00175420 /* NetWorkTools.swift */; };
 		EB4A347E2E83E57700AAC230 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A347B2E83E57700AAC230 /* Live.storyboard */; };
 		EB4A34832E83E58B00AAC230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A34812E83E58B00AAC230 /* Profile.storyboard */; };
@@ -81,6 +82,7 @@
 		EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		EB29DB392EAF5DDD00EDAC75 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		EB3884E82E92753A00175420 /* NetWorkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		EB4A347B2E83E57700AAC230 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		EB4A34812E83E58B00AAC230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		EB4A34922E83E62500AAC230 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB29DB392EAF5DDD00EDAC75 /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				EBA44A872E853CB000D70C4F /* PageContentView.swift in Sources */,
 				EB4A34962E83E68E00AAC230 /* HomeViewController.swift in Sources */,
 				EBE77F272E83F6880000F610 /* PageTitleView.swift in Sources */,
+				EB29DB3A2EAF5DDD00EDAC75 /* CycleModel.swift in Sources */,
 				EB9CCA612E93B81A0098CC27 /* RecommendViewModel.swift in Sources */,
 				EBD1678A2E93C14400062A2C /* AnchorGroup.swift in Sources */,
 				EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */,
