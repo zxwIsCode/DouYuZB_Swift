@@ -8,6 +8,7 @@
 import UIKit
 
 class AnchorModel: NSObject {
+    // 以下为了让属性支持KVC，需要加上@objc dynamic属性去修饰
     @objc dynamic var room_id : Int = 0
     @objc dynamic var vertical_src : String = ""
     // 0-电脑直播，1-手机直播

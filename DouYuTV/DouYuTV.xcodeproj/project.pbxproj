@@ -21,6 +21,8 @@
 		EB1BD5142E8D2944006F589A /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */; };
 		EB1BD5152E8D2944006F589A /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */; };
 		EB29DB3A2EAF5DDD00EDAC75 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29DB392EAF5DDD00EDAC75 /* CycleModel.swift */; };
+		EB29DB3D2EAF611200EDAC75 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29DB3B2EAF611200EDAC75 /* CollectionCycleCell.swift */; };
+		EB29DB3E2EAF611200EDAC75 /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB29DB3C2EAF611200EDAC75 /* CollectionCycleCell.xib */; };
 		EB3884E92E92753A00175420 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3884E82E92753A00175420 /* NetWorkTools.swift */; };
 		EB4A347E2E83E57700AAC230 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A347B2E83E57700AAC230 /* Live.storyboard */; };
 		EB4A34832E83E58B00AAC230 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A34812E83E58B00AAC230 /* Profile.storyboard */; };
@@ -83,6 +85,8 @@
 		EB1BD5122E8D2944006F589A /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		EB1BD5132E8D2944006F589A /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		EB29DB392EAF5DDD00EDAC75 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		EB29DB3B2EAF611200EDAC75 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
+		EB29DB3C2EAF611200EDAC75 /* CollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		EB3884E82E92753A00175420 /* NetWorkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		EB4A347B2E83E57700AAC230 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		EB4A34812E83E58B00AAC230 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 				EB1BD50F2E8D1ED6006F589A /* CollectionHeaderView.xib */,
 				EB4B87372EAE603000316626 /* RecommendCycleView.swift */,
 				EB4B87392EAE608E00316626 /* RecommendCycleView.xib */,
+				EB29DB3B2EAF611200EDAC75 /* CollectionCycleCell.swift */,
+				EB29DB3C2EAF611200EDAC75 /* CollectionCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				EB4A348F2E83E61100AAC230 /* Follow.storyboard in Resources */,
 				EB4A34832E83E58B00AAC230 /* Profile.storyboard in Resources */,
 				EB4B873A2EAE608E00316626 /* RecommendCycleView.xib in Resources */,
+				EB29DB3E2EAF611200EDAC75 /* CollectionCycleCell.xib in Resources */,
 				EB616ACB2E8D2FA7008FE8A8 /* CollectionPrettyCell.xib in Resources */,
 				EB4A347E2E83E57700AAC230 /* Live.storyboard in Resources */,
 				EB4A34942E83E62500AAC230 /* Home.storyboard in Resources */,
@@ -624,6 +631,7 @@
 				EB4B87382EAE603000316626 /* RecommendCycleView.swift in Sources */,
 				EB4A34892E83E5AD00AAC230 /* MainViewController.swift in Sources */,
 				EBD6B2EE2E8694E00020D0C9 /* RecommendViewController.swift in Sources */,
+				EB29DB3D2EAF611200EDAC75 /* CollectionCycleCell.swift in Sources */,
 				EB616ACA2E8D2FA7008FE8A8 /* CollectionPrettyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

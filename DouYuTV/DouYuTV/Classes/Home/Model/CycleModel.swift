@@ -8,10 +8,11 @@
 import UIKit
 
 class CycleModel: NSObject {
-    var title : String = ""
-    var pic_url : String = ""
+    // 以下为了让属性支持KVC，需要加上@objc dynamic属性去修饰
+    @objc dynamic var title : String = ""
+    @objc dynamic var pic_url : String = ""
     // 主播信息对应的字典
-    var room : [String : NSObject]? {
+    @objc dynamic var room : [String : NSObject]? {
         didSet {
             guard let room = room else { return }
             anchor = AnchorModel(dict: room)

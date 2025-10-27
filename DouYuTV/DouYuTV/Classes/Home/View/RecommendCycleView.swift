@@ -31,7 +31,9 @@ class RecommendCycleView: UIView {
        autoresizingMask = []
         
         // 注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellId)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellId)
+        let nib = UINib(nibName: "CollectionCycleCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: kCycleCellId)
         
         
     }
@@ -62,8 +64,8 @@ extension RecommendCycleView : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellId, for: indexPath)
-//        let cycleModel = cycleModels![indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellId, for: indexPath) as! CollectionCycleCell
+        cell.cycleModel = cycleModels![indexPath.item]
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
         return cell
     }
